@@ -1,53 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie & Web-Series Gallery</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CineVault - Movie & Series Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <h1>🎬 Movie & Web-Series Gallery</h1>
-    <div class="filters">
-      <button class="btn active" data-filter="all">All</button>
-      <button class="btn" data-filter="movie">Movies</button>
-      <button class="btn" data-filter="series">Web-Series</button>
+  <!-- Hero Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <span class="logo-icon">🎬</span>
+        <h1 class="site-title">CineVault</h1>
+      </div>
+      <p class="tagline">Your Premium Movie & Series Collection</p>
+    </div>
+    
+    <!-- Search & Filter Bar -->
+    <div class="control-bar">
+      <div class="search-box">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search titles, genres, actors..." aria-label="Search content">
+      </div>
+      
+      <div class="filters" role="tablist" aria-label="Category filters">
+        <button class="filter-btn active" data-filter="all" role="tab">
+          <span class="filter-icon">⭐</span>
+          <span>All</span>
+        </button>
+        <button class="filter-btn" data-filter="movie" role="tab">
+          <span class="filter-icon">🎥</span>
+          <span>Movies</span>
+        </button>
+        <button class="filter-btn" data-filter="series" role="tab">
+          <span class="filter-icon">📺</span>
+          <span>Series</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="gallery" id="gallery">
+  <!-- Main Gallery -->
+  <main class="gallery-container">
+    <div class="gallery" id="gallery" aria-live="polite">
+      
+      <!-- Movie Card 1 -->
+      <article class="card" data-category="movie" data-keywords="120 bahadur action drama war hindi farhan akhtar">
+        <div class="card-inner">
+          <div class="thumb">
+            <img src="images/fdxf02vUous6fty6O4nollyuo4m.webp" alt="120 Bahadur movie poster" loading="lazy">
+            <div class="thumb-overlay">
+              <button class="play-btn" aria-label="View details">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            <span class="badge badge-movie">Movie</span>
+          </div>
+          <div class="info">
+            <h2 class="title">120 Bahadur</h2>
+            <div class="rating-row">
+              <div class="stars">
+                <span class="star">⭐</span>
+                <span class="rating-text">New Release</span>
+              </div>
+              <span class="year">2025</span>
+            </div>
+            <div class="genre-tags">
+              <span class="tag">Action</span>
+              <span class="tag">Drama</span>
+              <span class="tag">War</span>
+            </div>
+            <p class="desc">
+              An epic war drama starring Farhan Akhtar, depicting a heroic tale of courage and sacrifice. Directed by Razneesh Ghai.
+            </p>
+            <div class="meta-info">
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Farhan Akhtar</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3h18v18H3z"></path>
+                  <path d="M7 7h10v10H7z"></path>
+                </svg>
+                <span>Hindi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Example Posters - Replace with your own images -->
-    <div class="card" data-category="movie">
-      <img src="images/movie1.jpg" alt="Movie 1">
-      <p>Movie Title 1</p>
+      <!-- Series Card 1 -->
+      <article class="card" data-category="series" data-keywords="family man season 3 action crime drama manoj bajpayee hindi">
+        <div class="card-inner">
+          <div class="thumb">
+            <img src="images/The-Family-Man-S03-Hindi-HDRip-ALL-Episodes.jpg" alt="The Family Man Season 3 poster" loading="lazy">
+            <div class="thumb-overlay">
+              <button class="play-btn" aria-label="View details">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            <span class="badge badge-series">Series</span>
+            <span class="quality-badge">4K</span>
+          </div>
+          <div class="info">
+            <h2 class="title">The Family Man — S3</h2>
+            <div class="rating-row">
+              <div class="stars">
+                <span class="star">⭐</span>
+                <span class="rating-text">8.7</span>
+              </div>
+              <span class="year">2025</span>
+            </div>
+            <div class="genre-tags">
+              <span class="tag">Action</span>
+              <span class="tag">Crime</span>
+              <span class="tag">Drama</span>
+            </div>
+            <p class="desc">
+              The highly anticipated third season follows Srikant Tiwari in his most challenging mission yet. Starring Manoj Bajpayee and Priyamani.
+            </p>
+            <div class="meta-info">
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                  <polyline points="17 2 12 7 7 2"></polyline>
+                </svg>
+                <span>7 Episodes</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <span>WEB-DL 4K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Series Card 2 -->
+      <article class="card" data-category="series" data-keywords="bengal files crime thriller vivek agnihotri">
+        <div class="card-inner">
+          <div class="thumb">
+            <img src="images/3gbZh1S735CLz7NwFRb7bycUWkP.webp" alt="The Bengal Files poster" loading="lazy">
+            <div class="thumb-overlay">
+              <button class="play-btn" aria-label="View details">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            <span class="badge badge-series">Series</span>
+            <span class="quality-badge">4K</span>
+          </div>
+          <div class="info">
+            <h2 class="title">The Bengal Files</h2>
+            <div class="rating-row">
+              <div class="stars">
+                <span class="star">⭐</span>
+                <span class="rating-text">7.1</span>
+              </div>
+              <span class="year">2025</span>
+            </div>
+            <div class="genre-tags">
+              <span class="tag">Crime</span>
+              <span class="tag">Thriller</span>
+              <span class="tag">Mystery</span>
+            </div>
+            <p class="desc">
+              A gripping crime thriller series directed by Vivek Agnihotri, exploring dark secrets and complex investigations in Bengal.
+            </p>
+            <div class="meta-info">
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+                <span>Vivek Agnihotri</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <span>WEB-DL 4K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
     </div>
-
-    <div class="card" data-category="movie">
-      <img src="images/movie2.jpg" alt="Movie 2">
-      <p>Movie Title 2</p>
+    
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+      <h3>No Results Found</h3>
+      <p>Try adjusting your search or filter to find what you're looking for.</p>
     </div>
-
-    <div class="card" data-category="series">
-      <img src="images/series1.jpg" alt="Series 1">
-      <p>Series Title 1</p>
-    </div>
-
-    <div class="card" data-category="series">
-      <img src="images/series2.jpg" alt="Series 2">
-      <p>Series Title 2</p>
-    </div>
-
   </main>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <span class="close" id="closeBtn">&times;</span>
-    <img id="lightboxImg" src="">
-    <p id="lightboxCaption"></p>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button class="lb-close" id="lbClose" aria-label="Close preview">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <div class="lb-content">
+      <img id="lbImage" alt="">
+      <div id="lbCaption" class="lb-caption"></div>
+    </div>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 CineVault. Premium Entertainment Collection.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
