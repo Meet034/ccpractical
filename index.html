@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie & Web-Series Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>hello</h1>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, dolores quibusdam veritatis asperiores itaque non expedita debitis unde harum fuga tenetur nesciunt quidem nulla reiciendis laboriosam cumque a, amet neque?</p>
+
+  <header>
+    <h1>🎬 Movie & Web-Series Gallery</h1>
+    <div class="filters">
+      <button class="btn active" data-filter="all">All</button>
+      <button class="btn" data-filter="movie">Movies</button>
+      <button class="btn" data-filter="series">Web-Series</button>
+    </div>
+  </header>
+
+  <main class="gallery" id="gallery">
+
+    <!-- Example Posters - Replace with your own images -->
+    <div class="card" data-category="movie">
+      <img src="images/movie1.jpg" alt="Movie 1">
+      <p>Movie Title 1</p>
+    </div>
+
+    <div class="card" data-category="movie">
+      <img src="images/movie2.jpg" alt="Movie 2">
+      <p>Movie Title 2</p>
+    </div>
+
+    <div class="card" data-category="series">
+      <img src="images/series1.jpg" alt="Series 1">
+      <p>Series Title 1</p>
+    </div>
+
+    <div class="card" data-category="series">
+      <img src="images/series2.jpg" alt="Series 2">
+      <p>Series Title 2</p>
+    </div>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
